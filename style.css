@@ -73,13 +73,21 @@ main {
 }
 
 .hero {
-    padding: 3rem 1rem;
+    padding: .25rem 1rem 3rem;
 }
 
 .hero h2 {
     font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 1rem;
+}
+
+.catchphrase {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 1.5rem 0;
 }
 
 .hero .subtitle {
@@ -105,6 +113,13 @@ main {
 .cta-button:hover {
     background-color: #256d44; /* Darker green */
     transform: translateY(-3px);
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid rgba(245, 245, 245, 0.3); /* A subtle line color */
+    width: 75%;
+    margin: 3rem auto 0; /* 3rem top, auto horizontal, 0 bottom */
 }
 
 .features {
@@ -213,10 +228,45 @@ footer {
     margin-top: 2rem;
 }
 
+.support-links {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.support-links a {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.support-links a:hover {
+    transform: scale(1.1);
+}
+
+.support-links .fab {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.support-links .kofi-link img,
+.support-links .bmac-link img {
+    height: 36px;
+    width: auto;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the border-radius is respected */
+}
+
 .wip-notice {
     font-style: italic;
     color: #ccc;
     margin-bottom: 0.5rem;
+}
+
+.footer-legal {
+    font-size: 0.9rem;
+    color: #ccc;
 }
 
 footer a {
@@ -247,7 +297,7 @@ footer a:hover {
     }
 
     .hero {
-        padding: 2rem 0;
+        padding: 0.25rem 0 2rem;
     }
 
     .hero h2 {

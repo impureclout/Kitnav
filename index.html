@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kitchen Navigator | Your Ultimate Recipe and Meal Planning Helper</title>
+    <meta name="description" content="Effortlessly discover recipes, plan meals, and create grocery lists with Kitchen Navigator. Your helper in every kitchen!">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://impureclout.github.io/Kitnav/">
+    <meta property="og:title" content="Kitchen Navigator | Your Ultimate Recipe and Meal Planning Helper">
+    <meta property="og:description" content="Effortlessly discover recipes, plan meals, and create grocery lists with Kitchen Navigator. Your helper in every kitchen!">
+    <meta property="og:image" content="https://impureclout.github.io/Kitnav/logo512.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://impureclout.github.io/Kitnav/">
+    <meta property="twitter:title" content="Kitchen Navigator | Your Ultimate Recipe and Meal Planning Helper">
+    <meta property="twitter:description" content="Effortlessly discover recipes, plan meals, and create grocery lists with Kitchen Navigator. Your helper in every kitchen!">
+    <meta property="twitter:image" content="https://impureclout.github.io/Kitnav/logo512.png">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo192.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -20,9 +38,12 @@
     <main>
         <section class="hero">
             <h2>Your Helper in Every Kitchen</h2>
+            <h3 class="catchphrase">Let's cook!</h3>
             <p class="subtitle">Effortlessly discover recipes, plan your meals, create grocery lists, and even design seasonal menus for your restaurant. All with the ingredients you have on hand.</p>
             <a href="https://kitnav.netlify.app" class="cta-button" target="_blank">Open Kitchen Navigator</a>
         </section>
+
+        <hr class="section-divider">
 
         <section class="features">
             <h3>How It Works</h3>
@@ -45,8 +66,18 @@
 
     <footer>
         <div class="footer-content">
+            <div class="support-links">
+                <a href="https://www.patreon.com/c/SmollVoice/posts" target="_blank" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
+                <a href="https://ko-fi.com/smollvoice" target="_blank" aria-label="Ko-fi" class="kofi-link">
+                    <!-- Ko-fi doesn't have a Font Awesome icon, so we use an img -->
+                    <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi">
+                </a>
+                <a href="https://buymeacoffee.com/smollvoice" target="_blank" aria-label="Buy Me a Coffee" class="bmac-link">
+                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee">
+                </a>
+            </div>
             <p class="wip-notice">Kitchen Navigator is a work in progress. We are always improving!</p>
-            <p>&copy; 2025 Kitchen Navigator. All rights reserved. | <a href="terms.html">Terms of Use</a></p>
+            <p class="footer-legal">&copy; 2025 Kitchen Navigator. All rights reserved. | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
 
