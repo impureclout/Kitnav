@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #2E8B57; /* SeaGreen to match the app */
+    --background-color: #6B4F3A; /* Woody Brown */
+    --text-on-dark: #f5f5f5; /* Off-white for readability */
+    --secondary-text-on-dark: #ccc; /* Lighter gray for subtitles */
+    
+    --text-on-light: #333333; /* Dark gray for text on cards */
+    --secondary-text-on-light: #4a4a4a;
+
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --header-background: #f0f0f0; /* Light grey */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-on-dark);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--header-background);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--card-background);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    height: 50px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero {
+    padding: 3rem 1rem;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    color: var(--secondary-text-on-dark);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(46, 139, 87, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #256d44; /* Darker green */
+    transform: translateY(-3px);
+}
+
+.features {
+    padding: 3rem 1rem;
+}
+
+.features h3 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Underline effect for the heading */
+.features h3::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    max-width: 320px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-on-light);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h4 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.status-note {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.card p {
+    font-size: 1rem;
+    color: var(--secondary-text-on-light);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
