@@ -32,6 +32,7 @@ header {
     z-index: 1000;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 nav {
@@ -68,12 +69,12 @@ h1 {
 }
 
 main {
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
 }
 
 .hero {
-    padding: .25rem 1rem 3rem;
+    padding: 0rem 1rem 2rem;
 }
 
 .hero h2 {
@@ -278,7 +279,58 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.early-access-note {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-style: italic;
+    color: var(--text-on-light);
+    font-size: 0.9rem;
+}
+
+.kickstarter-promo {
+    margin-bottom: 0.5rem; /* Space between this and "Let's cook!" */
+}
+
+.kickstarter-promo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem; /* Space between "Live on" and the logo */
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.kickstarter-promo a:hover {
+    transform: scale(1.05);
+}
+
+.live-on-text {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.kickstarter-promo img {
+    height: 38px;
+    width: auto;
+}
+
 @media (max-width: 768px) {
+    .early-access-note {
+        display: none;
+    }
+
+    .live-on-text {
+        font-size: 1.5rem;
+    }
+
+    .kickstarter-promo img {
+        height: 30px;
+    }
+
     header {
         padding: 1rem;
     }

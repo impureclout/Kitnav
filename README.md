@@ -17,7 +17,3 @@ You can access the live Kitchen Navigator application here:
 
 1.  Clone this repository to your local machine.
 2.  Open the `index.html` file in your web browser.
-
----
-
-*This landing page was built with the assistance of an AI-powered coding partner.* 
