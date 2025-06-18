@@ -229,12 +229,24 @@ footer {
     margin-top: 2rem;
 }
 
+.early-access-note {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-style: italic;
+    color: var(--text-on-light);
+    font-size: 0.9rem;
+}
+
 .support-links {
-    margin-bottom: 1.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .support-links a {
@@ -247,16 +259,16 @@ footer {
 }
 
 .support-links .fab {
-    font-size: 2rem;
-    color: #fff;
+    font-size: 1.8rem; /* Adjusted for header */
+    color: var(--text-on-light);
 }
 
 .support-links .kofi-link img,
 .support-links .bmac-link img {
-    height: 36px;
+    height: 32px; /* Adjusted for header */
     width: auto;
     border-radius: 8px;
-    overflow: hidden; /* Ensures the border-radius is respected */
+    overflow: hidden;
 }
 
 .wip-notice {
@@ -277,16 +289,6 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-.early-access-note {
-    position: absolute;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-style: italic;
-    color: var(--text-on-light);
-    font-size: 0.9rem;
 }
 
 .kickstarter-promo {
@@ -321,6 +323,10 @@ footer a:hover {
 @media (max-width: 768px) {
     .early-access-note {
         display: none;
+    }
+
+    .support-links {
+        display: none; /* Hide on mobile to prevent clutter */
     }
 
     .live-on-text {
