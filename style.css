@@ -239,56 +239,26 @@ footer {
     font-size: 0.9rem;
 }
 
-.support-links {
+.header-donate-btn {
     position: absolute;
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-}
-
-.support-links a {
-    display: inline-block;
-    transition: transform 0.2s ease;
-}
-
-.support-links a:hover {
-    transform: scale(1.1);
-}
-
-.support-links .fab {
-    font-size: 1.8rem; /* Adjusted for header */
-    color: var(--text-on-light);
-}
-
-.support-links .kofi-link img,
-.support-links .bmac-link img {
-    height: 32px; /* Adjusted for header */
-    width: auto;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.wip-notice {
-    font-style: italic;
-    color: #ccc;
-    margin-bottom: 0.5rem;
-}
-
-.footer-legal {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
     font-size: 0.9rem;
-    color: #ccc;
-}
-
-footer a {
-    color: #2E8B57; /* Primary color for consistency */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.header-donate-btn:hover {
+    background-color: #256d44;
+    transform: translateY(-50%) scale(1.05);
 }
 
 .kickstarter-promo {
@@ -321,12 +291,8 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-    .early-access-note {
+    .early-access-note, .header-donate-btn {
         display: none;
-    }
-
-    .support-links {
-        display: none; /* Hide on mobile to prevent clutter */
     }
 
     .live-on-text {
@@ -379,4 +345,120 @@ footer a:hover {
     .card {
         max-width: 90%;
     }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 2rem 2.5rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    color: var(--text-on-light);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.modal-support-links {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-support-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    font-size: 1rem;
+}
+
+.modal-support-links a:hover {
+    transform: scale(1.03);
+}
+
+.patreon-modal-link { background-color: #f96854; }
+.patreon-modal-link .fab { font-size: 1.2rem; }
+
+.kofi-modal-link { background-color: #13c3ff; }
+.kofi-modal-link img { height: 24px; }
+
+.bmac-modal-link {
+    padding: 0; /* The image button has its own padding */
+    background-color: transparent;
+}
+.bmac-modal-link img { 
+    height: 48px; 
+    border-radius: 8px;
+}
+
+footer a {
+    color: #2E8B57; /* Primary color for consistency */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-legal {
+    font-size: 0.9rem;
+    color: #ccc;
 } 

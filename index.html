@@ -34,15 +34,7 @@
                 <h1>Kitchen Navigator</h1>
             </a>
         </nav>
-        <div class="support-links">
-            <a href="https://www.patreon.com/c/SmollVoice/posts" target="_blank" aria-label="Patreon"><i class="fab fa-patreon"></i></a>
-            <a href="https://ko-fi.com/smollvoice" target="_blank" aria-label="Ko-fi" class="kofi-link">
-                <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi">
-            </a>
-            <a href="https://buymeacoffee.com/smollvoice" target="_blank" aria-label="Buy Me a Coffee" class="bmac-link">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee">
-            </a>
-        </div>
+        <button id="donate-button" class="header-donate-btn">Donate</button>
     </header>
 
     <main>
@@ -87,6 +79,28 @@
             <p class="footer-legal">&copy; 2025 Kitchen Navigator. All rights reserved. | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
+
+    <!-- The Donate Modal -->
+    <div id="donate-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Support Kitchen Navigator</h3>
+            <p>Your support helps us continue development and keep the kitchen running. Thank you!</p>
+            <div class="modal-support-links">
+                <a href="https://www.patreon.com/c/SmollVoice/posts" target="_blank" aria-label="Patreon" class="patreon-modal-link">
+                    <i class="fab fa-patreon"></i>
+                    <span>Support on Patreon</span>
+                </a>
+                <a href="https://ko-fi.com/smollvoice" target="_blank" aria-label="Ko-fi" class="kofi-modal-link">
+                    <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi">
+                    <span>Support on Ko-fi</span>
+                </a>
+                <a href="https://buymeacoffee.com/smollvoice" target="_blank" aria-label="Buy Me a Coffee" class="bmac-modal-link">
+                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee">
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
