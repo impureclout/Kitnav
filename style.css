@@ -315,6 +315,7 @@ footer {
     }
     
     .mobile-header-extras .header-donate-btn {
+        display: inline-block;
         position: static;
         transform: none;
         margin: 0 auto;
