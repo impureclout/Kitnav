@@ -247,7 +247,7 @@ footer {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -295,10 +295,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .early-access-note, .header-donate-btn {
-        display: none;
-    }
-
     .desktop-only {
         display: none;
     }
