@@ -261,6 +261,10 @@ footer {
     transform: translateY(-50%) scale(1.05);
 }
 
+.mobile-header-extras {
+    display: none; /* Hidden by default on desktop */
+}
+
 .kickstarter-promo {
     margin-bottom: 0.5rem; /* Space between this and "Let's cook!" */
 }
@@ -293,6 +297,35 @@ footer {
 @media (max-width: 768px) {
     .early-access-note, .header-donate-btn {
         display: none;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-header-extras {
+        display: block;
+        text-align: center;
+        padding: 1rem 1rem 0;
+    }
+    
+    .mobile-header-extras p {
+        font-style: italic;
+        margin-bottom: 0.75rem;
+    }
+    
+    .mobile-header-extras .header-donate-btn {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+    
+    .mobile-header-extras .header-donate-btn:hover {
+        transform: scale(1.05);
+    }
+    
+    .logo {
+        height: 40px; /* Make logo slightly smaller on mobile */
     }
 
     .live-on-text {

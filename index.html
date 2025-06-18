@@ -27,18 +27,22 @@
 </head>
 <body>
     <header>
-        <span class="early-access-note">Kitchen Navigator is currently Early Access.</span>
+        <span class="early-access-note desktop-only">Kitchen Navigator is currently Early Access.</span>
         <nav>
             <a href="#" class="header-link">
                 <img src="logo192.png" alt="Kitchen Navigator Logo" class="logo">
                 <h1>Kitchen Navigator</h1>
             </a>
         </nav>
-        <button id="donate-button" class="header-donate-btn">Donate</button>
+        <button id="donate-button-desktop" class="header-donate-btn desktop-only">Donate</button>
     </header>
 
     <main>
         <section class="hero">
+            <div class="mobile-header-extras">
+                <p>Kitchen Navigator is currently Early Access.</p>
+                <button id="donate-button-mobile" class="header-donate-btn">Donate</button>
+            </div>
             <h2>Your Helper in Every Kitchen</h2>
             <div class="kickstarter-promo">
                 <a href="https://www.kickstarter.com/projects/cardboarder/kitchen-navigator" target="_blank">
@@ -61,7 +65,7 @@
                     <p>Tell us what's in your fridge, and we'll show you all the delicious meals you can make right now.</p>
                 </div>
                 <div class="card">
-                    <h4>Plan Meals & Groceries <span class="status-note">(Coming Soon!)</span></h4>
+                    <h4>Plan Meals & Groceries</h4>
                     <p>Organize your week with our meal planner and automatically generate a shopping list so you never miss an ingredient.</p>
                 </div>
                 <div class="card">

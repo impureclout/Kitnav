@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modal functionality
     const donateModal = document.getElementById('donate-modal');
-    const donateButton = document.getElementById('donate-button');
+    const donateButtonDesktop = document.getElementById('donate-button-desktop');
+    const donateButtonMobile = document.getElementById('donate-button-mobile');
     const closeButton = document.querySelector('.close-button');
 
     // Function to open the modal
@@ -22,8 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Open the modal when the donate button is clicked
-    if (donateButton) {
-        donateButton.addEventListener('click', openModal);
+    if (donateButtonDesktop) {
+        donateButtonDesktop.addEventListener('click', openModal);
+    }
+    if (donateButtonMobile) {
+        donateButtonMobile.addEventListener('click', openModal);
     }
 
     // Close the modal when the close button (x) is clicked
